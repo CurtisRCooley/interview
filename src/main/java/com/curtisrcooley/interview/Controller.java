@@ -20,7 +20,7 @@ public class Controller {
     public void person(@RequestBody String json) {
         try {
             Person p = objectMapper.readValue(json, Person.class);
-            System.out.println(p.getName() + " " + p.getPhone() + " " + p.getAge());
+            System.out.println(p.name() + " " + p.phone() + " " + p.age());
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
